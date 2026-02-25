@@ -9,6 +9,10 @@
 ## Download
 The latest release of NetShift is available on the [Releases page](https://github.com/ZentrixLabs/NetShift/releases).  
 Download the `NetShiftInstaller.exe` file directly from GitHub Releases and run it as Administrator to install.
+	•	Install
+	•	Launch
+	•	Apply preset / DHCP
+	•	Done
 
 ## Overview
 
@@ -52,7 +56,7 @@ The app is designed to be **user-friendly**, **secure**, and **efficient**, mini
 For automated deployments:
 
 ```bash
-NetShiftInstaller.exe /silent
+NetShiftInstaller.exe /SILENT /NORESTART
 ```
 
 ---
@@ -88,7 +92,7 @@ If you want to build manually:
 1. **Clone the Repository**:
 
 ```bash
-git clone https://github.com/Mainframe79/NetShift.git
+git clone https://github.com/ZentrixLabs/NetShift.git
 cd NetShift
 ```
 
@@ -131,10 +135,6 @@ Pull requests are welcome!
 Please fork the repository, make your changes, and submit a pull request.  
 Ensure changes are well-tested and match the project's security-first standards.
 
-If you'd like to support this project:
-
-[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/default-orange.png)](https://www.buymeacoffee.com/Mainframe79)
-
 ---
 
 ## How It Works
@@ -152,7 +152,12 @@ User --> NetShiftMain.exe (runs as Standard User)
 - All privileged operations (IP reconfiguration, registry edits) happen securely through the service.
 - The service is isolated, only accessible locally, and installed via NetShiftServiceInstaller.exe.
 
+The service exposes a localhost-only named pipe interface and validates all requests before applying changes.
 ---
 
 ## License
 NetShift is licensed under the [MIT License](LICENSE).
+
+If you'd like to support this project:
+
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/default-orange.png)](https://www.buymeacoffee.com/Mainframe79)
